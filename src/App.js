@@ -11,7 +11,8 @@ function App() {
       e.preventDefault();
       try {
          let colors = new Values(color).all(10); //generates 21 color codes; 10 tints, 10 shades and base color
-         console.log(colors);
+         setList(colors);
+         //console.log(colors);
       } catch (error) {
          setError(true);
          console.log(error);
@@ -36,7 +37,17 @@ function App() {
             </form>
          </section>
          <section className='colors'>
-            <h4>list goes here</h4>
+            {list.map((color, index) => {
+               //console.log(color);
+               return (
+                  <SingleColor
+                     key={index}
+                     {...color} //get color property only out of all other list item property
+                     index={index}
+                     hexColor={color.hex}
+                  />
+               );
+            })}
          </section>
       </>
    );
