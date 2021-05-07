@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import SingleColor from './SingleColor';
+import Values from 'values.js'; //external library to generate list of tints and shades of a color.
 
 function App() {
    const [color, setColor] = useState(''); //color for which tints and shades will be generated
@@ -8,7 +9,13 @@ function App() {
 
    const handleSubmit = (e) => {
       e.preventDefault();
-      console.log('hello');
+      try {
+         let colors = new Values(color).all(10); //generates 21 color codes; 10 tints, 10 shades and base color
+         console.log(colors);
+      } catch (error) {
+         setError(true);
+         console.log(error);
+      }
    };
 
    return (
@@ -21,6 +28,7 @@ function App() {
                   value={color}
                   onChange={(e) => setColor(e.target.value)}
                   placeholder='#f15025'
+                  className={`${error ? 'error' : null}`}
                />
                <button className='btn' type='submit'>
                   submit
