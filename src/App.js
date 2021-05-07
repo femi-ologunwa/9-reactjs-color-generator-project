@@ -5,7 +5,7 @@ import Values from 'values.js'; //external library to generate list of tints and
 function App() {
    const [color, setColor] = useState(''); //color for which tints and shades will be generated
    const [error, setError] = useState(false); //to flag wrong color code input
-   const [list, setList] = useState([]); //list of color codes (tints and shades) generated for a user input
+   const [list, setList] = useState(new Values('#ffa76a').all(10)); //list of color codes (tints and shades) generated for a user input
 
    const handleSubmit = (e) => {
       e.preventDefault();
