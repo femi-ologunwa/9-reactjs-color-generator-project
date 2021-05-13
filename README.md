@@ -1,6 +1,6 @@
 ### React Color Generator
 
-[view page](https://femi-ologunwa.github.io/6-tabs/)
+[view page](https://femi-ologunwa.github.io/9-reactjs-color-generator-project/)
 
 ![](./homescreen.gif)
 
