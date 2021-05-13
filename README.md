@@ -1,8 +1,8 @@
-#### Homepage Screen
+### React Color Generator
 
-[view website](https://femi-ologunwa.github.io/6-tabs/)
+[view page](https://femi-ologunwa.github.io/6-tabs/)
 
-![](./homescreen.png)
+![](./homescreen.gif)
 
 ### Implementation
 
